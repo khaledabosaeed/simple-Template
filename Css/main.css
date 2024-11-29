@@ -54,7 +54,9 @@ body {
 
 :root {
   --main-color: #10cab7;
-  --secondry-color:#2c4755;
+  --secondry-color: #2c4755;
+  --section-padding:60px;
+  --section-background:#f6f6f6;
 }
 /* end variables */
 /* header */
@@ -191,7 +193,7 @@ header .links ul li:not(:last-child) a {
 .features {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #f6f6f6;
+  background-color: var(--section-background);
 }
 .features .continer {
   display: grid;
@@ -217,8 +219,8 @@ header .links ul li:not(:last-child) a {
 /* end features */
 /* start  service*/
 .service {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
 }
 .service .service-content {
   margin-top: 100px;
@@ -237,7 +239,6 @@ header .links ul li:not(:last-child) a {
     text-align: center;
     margin-bottom: 40px;
   }
-
 }
 
 .service .service-content i {
@@ -259,24 +260,52 @@ header .links ul li:not(:last-child) a {
   position: relative;
 }
 .service .service-content .photo::after {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 90%;
-    background-color: var(--secondry-color);
-    z-index: -1;
-    left: 50%;
-    top: -12.5%;
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  background-color: var(--secondry-color);
+  z-index: -1;
+  left: 50%;
+  top: -12.5%;
 }
-.service .service-content .photo img{
-    width: 240px;
+.service .service-content .photo img {
+  width: 240px;
 }
-@media (max-width:1199px) {
-    .service .service-content .photo img {
-        display: none;
-      }
-    
+@media (max-width: 1199px) {
+  .service .service-content .photo img {
+    display: none;
+  }
 }
-
-
 /* end  service*/
+/* start Portfolio */
+.Portfolio {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+.Portfolio .continer .Portfolio-content  {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+.Portfolio-content .card{
+  background-color: white;
+}
+.Portfolio-content .card .info{
+  padding: 10px;
+}
+.Portfolio- .card .info p{
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 0;
+}
+.Portfolio-content .card .info h3{
+  margin: 0;
+}
+.Portfolio-content .card img {
+  max-width:100%;
+}
+
+/* end Portfolio */
