@@ -2,29 +2,32 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Work Sans" , sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 .continer {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 15px;
+  margin: 0 auto;
 }
+/* Small */
+/* Small */
 @media (min-width: 768px) {
   .continer {
     width: 750px;
   }
 }
+/* Medium */
 @media (min-width: 992px) {
   .continer {
     width: 970px;
   }
 }
+/* Large */
 @media (min-width: 1200px) {
   .continer {
     width: 1170px;
   }
 }
+/* container */
 /* end global rules */
 /* special-heading */
 .special-heading {
@@ -55,7 +58,7 @@ body {
 :root {
   --main-color: #10cab7;
   --secondry-color: #2c4755;
-  --section-padding: 60px;
+  --section-padding: 60px 0;
   --section-background: #f6f6f6;
   --color-special-heading: #ebeced;
 }
@@ -315,6 +318,7 @@ header .links ul li:not(:last-child) a {
   max-width: 100%;
 }
 
+
 /* end Portfolio */
 /* start About  */
 
@@ -395,3 +399,56 @@ header .links ul li:not(:last-child) a {
   background-color: var(--main-color);
 }
 /* end about */
+/* start contact */
+.contact {
+  background-color: var(--section-background);
+  padding: var(--section-padding);
+}
+.contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .contact-content a {
+  display: block;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--main-color);
+  text-decoration: none;
+}
+.contact .contact-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--secondry-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+.contact .contact-content .social {
+  margin-top: 20px;
+  font-size: 16px;
+}
+@media (max-width : 767px) {
+  .contact .continer .contact-content h1 ,
+  .contact .continer .contact-content a{
+    font-size: 25px;
+}
+}
+footer{
+  background-color: var(--secondry-color);
+  padding: 30px 10px;
+}
+footer .continer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  
+}
+footer span{
+  color: var(--main-color);
+}
+
+/* End contact */
